@@ -122,9 +122,22 @@
 			<artifactId>hsqldb</artifactId>
 			<version>2.3.2</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>com.typesafe</groupId>
+			<artifactId>config</artifactId>
+			<version>1.2.1</version>
+		</dependency>
 
 
-
+		<!-- gdt -->
+		<dependency>
+			<groupId>gdt.infra</groupId>
+			<artifactId>infra-cfg</artifactId>
+			<version>1.0.1</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/src/main/webapp/WEB-INF/lib/infra-cfg-1.0.1.jar</systemPath>
+		</dependency>
 
 		<!-- servlet -->
 		<dependency>

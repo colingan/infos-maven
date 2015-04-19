@@ -1,12 +1,20 @@
 package com.github.colingan.infos.biz;
 
+import gdt.infra.cfg.Configs;
+
 import java.util.regex.Pattern;
 
-public interface BizConstants {
+import com.typesafe.config.Config;
+
+
+public class BizConstants {
+
+  private static final String OS = System.getProperty("os", "win");
+  private static final Config SYS_CONF = Configs.load("sysconf-" + OS + ".properties");
 
   public static final String DATE_FORMAT_STRING = "yyyy-MM-dd";
 
-  public static final String CONTENT_FILE_DEST = "D:/infodatas/datas";
+  public static final String CONTENT_FILE_DEST = SYS_CONF.getString("content.file.dest");
 
   public static final String PRODUCT_ATTACHMENT_DIR = CONTENT_FILE_DEST + "/product";
 
